@@ -10,13 +10,6 @@ build:
     # Read more about steps on our dev center:
     # https://devcenter.wercker.com/development/steps/
   steps:
-    # https://github.com/wercker/step-maven
-    - install-packages:
-        packages: maven
-        
-    - script:
-        name: maven build
-        code: mvn clean package
 
     - script:
         - npm-install
