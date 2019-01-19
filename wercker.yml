@@ -3,7 +3,7 @@
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
 # box: openjdk:8-jdk
-box: debian
+box: jimador/docker-jdk-8-maven-node
 
 build:
     # Steps make up the actions in your pipeline
@@ -11,16 +11,6 @@ build:
     # https://devcenter.wercker.com/development/steps/
   steps:
     # https://github.com/wercker/step-maven
-    - install-packages:
-        packages: openjdk-8-jdk maven nodejs
-        
-    - script:
-        name: check npm & node
-        code: |
-            sudo apt-get install npm
-            npm -version
-            nodejs -version
-            
     - script:
         name: maven build
         code: mvn clean package
