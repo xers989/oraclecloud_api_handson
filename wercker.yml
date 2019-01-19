@@ -2,7 +2,8 @@
 # Docker Hub https://hub.docker.com/_/openjdk/
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
-box: openjdk:8-jdk
+# box: openjdk:8-jdk
+box: apiaryio/dredd
 
 build:
     # Steps make up the actions in your pipeline
@@ -18,10 +19,5 @@ build:
         code: mvn clean package
 
     - script:
-        name: set nodejs environment
-        code: |
-            apt-get update
-            apt-get install -y nodejs
-            apt-get install -y npm
-            nodejs -v
-            npm -v
+        - npm-install
+        - npm-test
