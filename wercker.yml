@@ -18,8 +18,7 @@ build:
     - script:
         name: maven build
         code: mvn clean package
-npm-install & dredd test:
-  # override busybox
+npm-install-dredd-test:
   box: node
   steps:
     - npm-install
