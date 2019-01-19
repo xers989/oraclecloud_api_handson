@@ -2,14 +2,21 @@
 # Docker Hub https://hub.docker.com/_/openjdk/
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
-# box: openjdk:8-jdk
-box: apiaryio/dredd
+box: openjdk:8-jdk
 
 build:
     # Steps make up the actions in your pipeline
     # Read more about steps on our dev center:
     # https://devcenter.wercker.com/development/steps/
   steps:
+    # https://github.com/wercker/step-maven
+    - install-packages:
+        packages: maven
+        
+    - script:
+        name: maven build
+        code: mvn clean package
+
     - script:
         - npm-install
         - npm-test
