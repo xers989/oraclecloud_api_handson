@@ -16,7 +16,7 @@ build:
         name: maven build
         code: mvn clean package
 
-deploy:
+run-tests:
   box: node
   steps:
     - npm-install
