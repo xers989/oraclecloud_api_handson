@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.helidon.examples</groupId>
-    <artifactId>quickstart-mp2</artifactId>
+    <artifactId>quickstart-mp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
