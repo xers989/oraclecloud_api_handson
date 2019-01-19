@@ -17,7 +17,7 @@ build:
         code: mvn clean package
     - script:
         name: set nodejs emvironment
-        code: sudo apt-get -y install nodejs npm
+        code: apt-get -y install nodejs npm
     - script:
         - npm-install
         - npm-test
