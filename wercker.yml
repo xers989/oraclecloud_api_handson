@@ -15,6 +15,7 @@ build:
     - script:
         name: maven build
         code: mvn clean package
+        
 deploy:
   box: node
   steps:
