@@ -11,7 +11,6 @@ build:
     # Steps make up the actions in your pipeline
     # Read more about steps on our dev center:
     # https://devcenter.wercker.com/development/steps/
-  box: openjdk:8-jdk
   steps:
     # https://github.com/wercker/step-maven
     - install-packages:
@@ -19,7 +18,7 @@ build:
     - script:
         name: maven build
         code: mvn clean package
-build:
+npm-install & dredd test:
   # override busybox
   box: node
   steps:
