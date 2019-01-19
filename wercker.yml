@@ -12,7 +12,7 @@ build:
   steps:
     # https://github.com/wercker/step-maven
     - install-packages:
-        packages: openjdk-8-jdk maven
+        packages: openjdk-8-jdk maven nodejs npm
         
     - script:
         name: maven build
