@@ -20,3 +20,7 @@ build:
     - script:
         name: set nodejs emvironment
         code: apt-get -y install nodejs
+    
+    - script:
+        - npm-install
+        - npm-test
