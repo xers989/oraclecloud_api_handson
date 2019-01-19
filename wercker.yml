@@ -11,15 +11,17 @@ build:
     # https://devcenter.wercker.com/development/steps/
   steps:
     # https://github.com/wercker/step-maven
+    - script:
+        name: check npm & node
+        code: |
+            sudo apt-get install -y nodejs
+            sudo apt-get install -y build-essential
+            npm -version
+            nodejs -version
+            
     - install-packages:
-        packages: openjdk-8-jdk maven nodejs build-essential npm
+        packages: openjdk-8-jdk maven
         
     - script:
         name: maven build
         code: mvn clean package
-    
-    - script:
-        name: check npm & node
-        code: |
-            npm -version
-            nodejs -version
