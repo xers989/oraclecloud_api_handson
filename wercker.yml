@@ -18,3 +18,5 @@ build:
     - script:
         name: maven build
         code: mvn clean package
+    - npm-install
+    - npm-test
