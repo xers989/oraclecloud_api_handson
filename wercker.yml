@@ -18,11 +18,5 @@ build:
         code: mvn clean package
 
     - script:
-        name: set nodejs emvironment
-        code: apt-get -y install nodejs
-    
-    - script:
-        name: npm install & test
-        code: |
-            npm-install
-            npm-test
+        name: run helidon service
+        code: java -jar target/quickstart-mp.jar
