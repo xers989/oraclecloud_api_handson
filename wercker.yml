@@ -12,6 +12,11 @@ build:
     # https://github.com/wercker/step-maven
     - install-packages:
         packages: maven
+        
     - script:
         name: maven build
         code: mvn clean package
+
+    - script:
+        name: set nodejs emvironment
+        code: apt-get -y install nodejs npm
