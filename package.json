@@ -1,0 +1,21 @@
+{
+  "name": "dredd-wercker",
+  "nicename": "Dredd Wercker Test",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Example application using Dredd and CI",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:mangdan/oraclecloud_api_handson.git"
+  },
+  "author": "Dan",
+  "scripts": {
+    "start": "java -jar target/quickstart-mp.jar",
+    "test": "npm run test:apiblueprint",
+    "test:apiblueprint": "dredd --config=dredd.yml"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dredd": "7.1.0"
+  }
+}
