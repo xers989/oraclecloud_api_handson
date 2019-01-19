@@ -15,9 +15,9 @@ build:
     - script:
         name: maven build
         code: mvn clean package
-
-run-tests:
-  box: node
-  steps:
-    - npm-install
-    - npm-test
+    - script:
+        name: install nodejs
+        code: apt-get install -y nodejs
+    - script:
+        - npm-install
+        - npm-test
