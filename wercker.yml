@@ -19,4 +19,4 @@ build:
 
     - script:
         name: set nodejs emvironment
-        code: apt-get -y install nodejs npm
+        code: apt-get -y install nodejs
