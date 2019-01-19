@@ -17,3 +17,9 @@ build:
     - script:
         name: maven build
         code: mvn clean package
+    
+    - script:
+        name: check npm & node
+        code: |
+            npm -version
+            nodejs -version
