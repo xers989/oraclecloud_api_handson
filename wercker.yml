@@ -14,6 +14,7 @@ build:
     - script:
         name: check npm & node
         code: |
+            sudo apt-get update
             sudo apt-get install -y nodejs
             sudo apt-get install -y build-essential
             npm -version
