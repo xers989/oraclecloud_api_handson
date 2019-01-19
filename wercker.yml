@@ -2,7 +2,8 @@
 # Docker Hub https://hub.docker.com/_/openjdk/
 # Read more about containers on our dev center
 # https://devcenter.wercker.com/overview-and-core-concepts/containers/
-box: openjdk:8-jdk
+# box: openjdk:8-jdk
+box: debian
 
 build:
     # Steps make up the actions in your pipeline
@@ -11,7 +12,7 @@ build:
   steps:
     # https://github.com/wercker/step-maven
     - install-packages:
-        packages: maven
+        packages: openjdk-8-jre maven
         
     - script:
         name: maven build
