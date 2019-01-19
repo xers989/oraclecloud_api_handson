@@ -18,9 +18,3 @@ build-base:
     - script:
         name: maven build
         code: mvn clean package
-build:
-  # override busybox
-  box: node
-  steps:
-    - npm-install
-    - npm-test
