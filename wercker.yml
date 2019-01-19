@@ -18,7 +18,7 @@ build:
     - script:
         name: maven build
         code: mvn clean package
-npm-install-dredd-test:
+deploy:
   box: node
   steps:
     - npm-install
