@@ -5,7 +5,7 @@ HOST: http://polls.apiblueprint.org/
 
 영화 정보를 제공하는 API 입니다.
 
-## Movie Collection [/movies]
+## Movie Collection [/movies1]
 
 ### List All Movies [GET]
 
@@ -31,7 +31,7 @@ HOST: http://polls.apiblueprint.org/
 Movie ID와 Title로 조회하는 API 입니다.
 
 + Parameters
-    - id : 2699 (string, required)
+    - id : 2699 (number, required)
     - title : Titanic (string, optional)
     
 + Request
@@ -41,6 +41,7 @@ Movie ID와 Title로 조회하는 API 입니다.
 
 + Response 200 (application/json)
     + Attributes
+        - id : 2699 (number, required)
         - title : Titanic
         - release_date : 1997.12.19
         - runtime : 194
