@@ -30,6 +30,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -69,13 +70,15 @@ public class MovieResource {
      * @throws IOException
      */
     @SuppressWarnings("checkstyle:designforextension")
-    @Path("/{title}")
+    @Path("/{id}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public JsonObject getMessage(@PathParam("title") String title) throws IOException {
+    public JsonObject getMessage(@PathParam("id") String id, @QueryParam("title") String title) throws IOException {
         
         JsonObject movieObject = null;
-        if(title.equals("Titanic") || title.equals("titanic")) {
+
+        title = (title == null ? "" : title);
+        if(id.equals("2399")) {
             InputStream fis = new FileInputStream("src/main/resources/movie.json");
 
             JsonReader reader = Json.createReader(fis);
