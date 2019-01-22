@@ -72,10 +72,10 @@ public class MovieResource {
     @Path("/{title}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public JsonObject getMessage(@PathParam("title") String title) throws IOException {
+    public JsonObject getMessage(@PathParam("id") String id, @QueryParam("title") Optional<String> title) throws IOException {
         
         JsonObject movieObject = null;
-        if(title.equals("Titanic") || title.equals("titanic")) {
+        if(id.equals("2399") || (title.equals("Titanic") || title.equals("titanic"))) {
             InputStream fis = new FileInputStream("src/main/resources/movie.json");
 
             JsonReader reader = Json.createReader(fis);
