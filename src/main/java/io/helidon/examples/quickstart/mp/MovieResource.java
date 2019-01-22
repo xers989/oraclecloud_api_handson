@@ -78,7 +78,7 @@ public class MovieResource {
         JsonObject movieObject = null;
 
         title = (title == null ? "" : title);
-        if(id.equals("2399")) {
+        if(id.equals("2699")) {
             InputStream fis = new FileInputStream("src/main/resources/movie.json");
 
             JsonReader reader = Json.createReader(fis);
