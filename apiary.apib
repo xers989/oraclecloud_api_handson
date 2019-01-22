@@ -13,13 +13,13 @@ HOST: http://polls.apiblueprint.org/
 
         [
             {
-                "id": "19995",
+                "id": 19995,
                 "title": "Avatar",
                 "release_date": "2009.12.18",
                 "runtime" : 100
             },
             {
-                "id": "2699",
+                "id": 2699,
                 "title": "Titanic",
                 "release_date": "1997.12.19",
                 "runtime" :194
@@ -31,7 +31,7 @@ HOST: http://polls.apiblueprint.org/
 Movie ID와 Title로 조회하는 API 입니다.
 
 + Parameters
-    - id : 2699 (string, required)
+    - id : 2699 (number, required)
     - title : Titanic (string, optional)
     
 + Request
@@ -41,14 +41,14 @@ Movie ID와 Title로 조회하는 API 입니다.
 
 + Response 200 (application/json)
     + Attributes
-        - id : 2699 (string, required)
+        - id : 2699 (number, required)
         - title : Titanic
         - release_date : 1997.12.19
         - runtime : 194
         - Include MovieDetail
         - genres (array[Genres])
-        
-        
+
+
 
 # Data Structure
 
