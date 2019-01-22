@@ -20,8 +20,6 @@ import java.io.IOException;
 import java.util.logging.LogManager;
 
 import io.helidon.microprofile.server.Server;
-
-
 /**
  * Main method simulating trigger of main method of the server.
  */
@@ -42,8 +40,7 @@ public final class Main {
 
         Server server = startServer();
 
-        System.out.println("http://localhost:" + server.port() + "/greet");
-        System.out.println("http://localhost:" + server.port() + "/movie");
+        System.out.println("http://localhost:" + server.port() + "/movies");
     }
 
     /**
