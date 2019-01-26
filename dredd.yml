@@ -1,7 +1,7 @@
 reporter: apiary
 custom:
-  apiaryApiKey: 
-  apiaryApiName: 
+  apiaryApiKey: 7329f15403f5b1ba319ee58ecf4f35df
+  apiaryApiName: xers989
 dry-run: null
 hookfiles: null
 language: nodejs
