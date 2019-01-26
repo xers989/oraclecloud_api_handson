@@ -1,0 +1,65 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Movie API
+
+영화 정보를 제공하는 API 입니다.
+
+## Movie Collection [/movies]
+
+### List All Movies [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 19995,
+                "title": "Avatar",
+                "release_date": "2009.12.18",
+                "runtime" : 100
+            },
+            {
+                "id": 2699,
+                "title": "Titanic",
+                "release_date": "1997.12.19",
+                "runtime" :194
+            }
+        ]
+
+### Get a Movie [GET /movies/{id}?title={title}]
+
+Movie ID와 Title로 조회하는 API 입니다.
+
++ Parameters
+    - id : 2699 (number, required)
+    - title : Titanic (string, optional)
+    
++ Request
+    + Header
+            
+            Authorization : Basic AAA
+
++ Response 200 (application/json)
+    + Attributes
+        - id : 2699 (number, required)
+        - title : Titanic
+        - release_date : 1997.12.19
+        - runtime : 194
+        - Include MovieDetail
+        - genres (array[Genres])
+
+
+
+# Data Structure
+
+## MovieDetail (object)
+- overview : In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization. (string)
+- status : Released
+- homepage : http://www.titanicmovie.com
+- vote_average : 7.2
+- vote_count : 12114
+
+
+## Genres (object)
+- id : 18 (number, required)
+- name : Drama (string, required)
